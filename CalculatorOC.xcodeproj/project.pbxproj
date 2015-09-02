@@ -14,6 +14,8 @@
 		C3D5230D1B8CC6D1008C9D8C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3D5230C1B8CC6D1008C9D8C /* Images.xcassets */; };
 		C3D523101B8CC6D1008C9D8C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D5230E1B8CC6D1008C9D8C /* LaunchScreen.xib */; };
 		C3D5231C1B8CC6D1008C9D8C /* CalculatorOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D5231B1B8CC6D1008C9D8C /* CalculatorOCTests.m */; };
+		C3D523271B8DB4A3008C9D8C /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D523261B8DB4A3008C9D8C /* CalculatorBrain.m */; };
+		C3D523281B8DB4A3008C9D8C /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D523261B8DB4A3008C9D8C /* CalculatorBrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		C3D523151B8CC6D1008C9D8C /* CalculatorOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D5231A1B8CC6D1008C9D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3D5231B1B8CC6D1008C9D8C /* CalculatorOCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorOCTests.m; sourceTree = "<group>"; };
+		C3D523251B8DB43B008C9D8C /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
+		C3D523261B8DB4A3008C9D8C /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			children = (
 				C3D523001B8CC6D1008C9D8C /* Info.plist */,
 				C3D523011B8CC6D1008C9D8C /* main.m */,
+				C3D523251B8DB43B008C9D8C /* CalculatorBrain.h */,
+				C3D523261B8DB4A3008C9D8C /* CalculatorBrain.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -222,6 +228,7 @@
 				C3D523081B8CC6D1008C9D8C /* ViewController.m in Sources */,
 				C3D523051B8CC6D1008C9D8C /* AppDelegate.m in Sources */,
 				C3D523021B8CC6D1008C9D8C /* main.m in Sources */,
+				C3D523271B8DB4A3008C9D8C /* CalculatorBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3D5231C1B8CC6D1008C9D8C /* CalculatorOCTests.m in Sources */,
+				C3D523281B8DB4A3008C9D8C /* CalculatorBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
