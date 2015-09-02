@@ -44,6 +44,9 @@ static bool toClear = false;
         self.digit2 = @"";
     }
     
+    int i = 2;
+    i = 6;
+    
     [self.brainDelegate calculatorBrainDidChangeValue:digit2];
 }
 
@@ -135,6 +138,8 @@ static bool toClear = false;
         self.digit1 = @"";
         self.operation = @"";
     }
+    
+    
     self.digit2 = @"";
     typing = false;
     [self.brainDelegate calculatorBrainDidChangeValue:digit2];
