@@ -14,6 +14,9 @@
 @property NSString* digit2;
 @property NSString* operation;
 
+- (NSString*) validateResult;
+- (int) binaryfunction: (NSString *)str;
+
 @end
 
 
@@ -25,6 +28,47 @@
 
 static bool typing = false;
 
+- (NSString*) validateResult
+{
+    NSRange range = [self.digit2 rangeOfString:@"."];
+    if (range.location != NSNotFound)
+    {
+        NSString *part2 = [self.digit2 substringFromIndex:range.location];
+        
+        if ([part2 length] >= 1)
+        {
+            NSInteger last = [part2 length] - 1;
+        
+            while (true)
+            {
+                NSString* digit = [part2 substringWithRange:NSMakeRange(last, 1)];
+                if ([digit isEqualToString:@"0"])
+                {
+                   [self backspace];
+                }
+                else
+                {
+                  break;
+                }
+                last--;
+                if (last == 0) break;
+            }
+            
+            
+        }
+        
+        
+        if ([[self.digit2 substringFromIndex:[self.digit2 length] - 1] isEqualToString:@"."])
+        {
+            [self backspace];
+        }
+    }
+    
+    return self.digit2;
+}
+
+
+
 - (void)backspace
 {
     if (self.digit2.length)
@@ -35,23 +79,25 @@ static bool typing = false;
         }
         else
         {
-            if(![self.digit2 isEqualToString:@"0"] && self.digit2.length > 1)
-            {
-                self.digit2 = [self.digit2 substringToIndex:self.digit2.length - 1];
-            }
-            if(self.digit2.length==1)
+            if (self.digit2.length == 1)
             {
                 self.digit2=@"0";
             }
+            
+            if ( ![self.digit2 isEqualToString:@"0"] && self.digit2.length > 1)
+            {
+                self.digit2 = [self.digit2 substringToIndex:self.digit2.length - 1];
+            }
+
         }
     }
     else
     {
-        self.digit2 = @")";
+        self.digit2 = @"0";
     }
     
    
-    [self.brainDelegate calculatorBrainDidChangeValue:digit2];
+    [self.brainDelegate calculatorBrainDidChangeValue:self.digit2];
 }
 
 - (void)numberTapped:(NSString *)number
@@ -66,7 +112,7 @@ static bool typing = false;
         typing = true;
     }
 
-    [self.brainDelegate calculatorBrainDidChangeValue:digit2];
+    [self.brainDelegate calculatorBrainDidChangeValue:self.digit2];
     
 }
 - (void)operationTapped:(NSString *)oper
@@ -82,7 +128,7 @@ static bool typing = false;
         self.digit1 = self.digit2;
         self.operation = oper;
         typing = false;
-        [self.brainDelegate calculatorBrainDidChangeValue:digit2];
+        [self.brainDelegate calculatorBrainDidChangeValue:self.digit2];
     }
     
     self.digit2 = @"";
@@ -100,7 +146,7 @@ static bool typing = false;
     {
         self.digit2 = [self.digit2 stringByAppendingString:@"."];
     }
-     [self.brainDelegate calculatorBrainDidChangeValue:digit2];
+     [self.brainDelegate calculatorBrainDidChangeValue:self.digit2];
 }
 
 - (void)calculate
@@ -130,10 +176,10 @@ static bool typing = false;
         }
         default: break;
     }
-    //toClear = false;
+
     typing = false;
-    [self.brainDelegate calculatorBrainDidChangeValue:digit2];
-    //self.digit1= @"";
+    [self.brainDelegate calculatorBrainDidChangeValue:[self validateResult]];
+
 }
 - (void)clearTapped:(BOOL)all
 {
@@ -143,10 +189,9 @@ static bool typing = false;
         self.operation = @"";
     }
     
-    
     self.digit2 = @"";
     typing = false;
-    [self.brainDelegate calculatorBrainDidChangeValue:digit2];
+    [self.brainDelegate calculatorBrainDidChangeValue:@"0"];
 }
 
 - (int)binaryfunction: (NSString *) str
@@ -174,7 +219,7 @@ static bool typing = false;
 - (void)unaryfunction
 {
    self.digit2 = [NSString stringWithFormat:@"%f", sqrt([self.digit2 doubleValue])];
-   [self.brainDelegate calculatorBrainDidChangeValue:digit2];
+   [self.brainDelegate calculatorBrainDidChangeValue:[self validateResult]];
 }
 
 

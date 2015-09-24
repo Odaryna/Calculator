@@ -22,7 +22,7 @@
 - (void)calculate; // When = tapped
 - (void)clearTapped:(BOOL)all;
 - (void)backspace;
-- (int) binaryfunction: (NSString *)str;
+
 - (void) unaryfunction;
 
 @property (nonatomic, weak) NSObject <CalculatorBrainProtocol> *brainDelegate;

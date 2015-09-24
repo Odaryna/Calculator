@@ -16,6 +16,7 @@
 		C3D5231C1B8CC6D1008C9D8C /* CalculatorOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D5231B1B8CC6D1008C9D8C /* CalculatorOCTests.m */; };
 		C3D523271B8DB4A3008C9D8C /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D523261B8DB4A3008C9D8C /* CalculatorBrain.m */; };
 		C3D523281B8DB4A3008C9D8C /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D523261B8DB4A3008C9D8C /* CalculatorBrain.m */; };
+		C3F4202A1BB446D70054456C /* digit-facebook-big-green.6f1b259d.png in Resources */ = {isa = PBXBuildFile; fileRef = C3F420291BB446D70054456C /* digit-facebook-big-green.6f1b259d.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		C3D5231B1B8CC6D1008C9D8C /* CalculatorOCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorOCTests.m; sourceTree = "<group>"; };
 		C3D523251B8DB43B008C9D8C /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
 		C3D523261B8DB4A3008C9D8C /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
+		C3F420291BB446D70054456C /* digit-facebook-big-green.6f1b259d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "digit-facebook-big-green.6f1b259d.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				C3D523011B8CC6D1008C9D8C /* main.m */,
 				C3D523251B8DB43B008C9D8C /* CalculatorBrain.h */,
 				C3D523261B8DB4A3008C9D8C /* CalculatorBrain.m */,
+				C3F420291BB446D70054456C /* digit-facebook-big-green.6f1b259d.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			files = (
 				C3D5230B1B8CC6D1008C9D8C /* Main.storyboard in Resources */,
 				C3D523101B8CC6D1008C9D8C /* LaunchScreen.xib in Resources */,
+				C3F4202A1BB446D70054456C /* digit-facebook-big-green.6f1b259d.png in Resources */,
 				C3D5230D1B8CC6D1008C9D8C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +430,7 @@
 				C3D523211B8CC6D1008C9D8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3D523221B8CC6D1008C9D8C /* Build configuration list for PBXNativeTarget "CalculatorOCTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +439,7 @@
 				C3D523241B8CC6D1008C9D8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
