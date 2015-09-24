@@ -24,7 +24,6 @@
 @synthesize operation;
 
 static bool typing = false;
-static bool toClear = false;
 
 - (void)backspace
 {
@@ -32,21 +31,26 @@ static bool toClear = false;
     {
         if ([self.digit2 isEqualToString:@"inf"] || [self.digit2 isEqualToString:@"nan"])
         {
-            self.digit2= @"";
+            self.digit2= @"0";
         }
         else
         {
-            self.digit2 = [self.digit2 substringToIndex:self.digit2.length - 1];
+            if(![self.digit2 isEqualToString:@"0"] && self.digit2.length > 1)
+            {
+                self.digit2 = [self.digit2 substringToIndex:self.digit2.length - 1];
+            }
+            if(self.digit2.length==1)
+            {
+                self.digit2=@"0";
+            }
         }
     }
     else
     {
-        self.digit2 = @"";
+        self.digit2 = @")";
     }
     
-    int i = 2;
-    i = 6;
-    
+   
     [self.brainDelegate calculatorBrainDidChangeValue:digit2];
 }
 
@@ -82,7 +86,7 @@ static bool toClear = false;
     }
     
     self.digit2 = @"";
-    toClear = true;
+
 }
 
 - (void)dotTapped{
@@ -126,14 +130,14 @@ static bool toClear = false;
         }
         default: break;
     }
-    toClear = false;
+    //toClear = false;
     typing = false;
     [self.brainDelegate calculatorBrainDidChangeValue:digit2];
     //self.digit1= @"";
 }
 - (void)clearTapped:(BOOL)all
 {
-    if (all && !toClear)
+    if (all)
     {
         self.digit1 = @"";
         self.operation = @"";
