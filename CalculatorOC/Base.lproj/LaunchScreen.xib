@@ -19,16 +19,26 @@
                     <nil key="highlightedColor"/>
                     <color key="shadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit-facebook-big-green.6f1b259d.png" translatesAutoresizingMaskIntoConstraints="NO" id="aBj-89-UAs">
+                    <rect key="frame" x="158" y="217" width="164" height="71"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
+                <constraint firstAttribute="trailing" secondItem="aBj-89-UAs" secondAttribute="trailing" constant="158" id="IMk-Yb-cL6"/>
                 <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
+                <constraint firstItem="aBj-89-UAs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="158" id="cU7-IF-8xg"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstItem="aBj-89-UAs" firstAttribute="top" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="31" id="k1L-BJ-3on"/>
+                <constraint firstAttribute="bottom" secondItem="aBj-89-UAs" secondAttribute="bottom" constant="192" id="yxg-Gs-i24"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="548" y="455"/>
+            <point key="canvasLocation" x="618" y="457"/>
         </view>
     </objects>
+    <resources>
+        <image name="digit-facebook-big-green.6f1b259d.png" width="220" height="220"/>
+    </resources>
 </document>
