@@ -16,11 +16,11 @@
 @property CalculatorBrain* calc;
 - (IBAction)performDigit:(UIButton *)sender;
 - (IBAction)performOp:(UIButton *)sender;
-- (IBAction)Equal;
-- (IBAction)point;
+- (IBAction)equal;
+- (IBAction)dot;
 - (IBAction)BS;
 - (IBAction)allClear;
-- (IBAction)Clear;
+- (IBAction)clear;
 - (IBAction)unaryF;
 
 
@@ -45,13 +45,13 @@
     [self.calc operationTapped:sender.currentTitle];
 }
 
-- (IBAction)Equal
+- (IBAction)equal
 {
     [self.calc calculate];
 }
 
 
-- (IBAction)point
+- (IBAction)dot
 {
     [self.calc dotTapped];
 }
@@ -67,7 +67,7 @@
     [self.calc clearTapped:true];
 }
 
-- (IBAction)Clear
+- (IBAction)clear
 {
     [self.calc clearTapped:false];
 }
