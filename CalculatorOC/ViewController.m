@@ -28,7 +28,8 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad{
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.calc = [[CalculatorBrain alloc] init];
